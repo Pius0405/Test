@@ -114,7 +114,7 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
     // Helper function for contains key
     private int getIndex(K key, int tableSize) {
         int hashCode = key.hashCode();
-        return hashCode%tableSize;
+        return Math.floorMod(hashCode, tableSize);
     }
 
 
